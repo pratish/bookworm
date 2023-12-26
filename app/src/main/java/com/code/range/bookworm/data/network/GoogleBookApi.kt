@@ -12,5 +12,6 @@ interface GoogleBookApi {
     fun getBook(@Path("id") id: String) : Call<RemoteBook>
 
     @GET("books/v1/volumes")
-    fun getBooks(@Query("q") query: String): Call<RemoteBookList>
+    fun getBooks(@Query("q") query: String, @Query("max_results") max: Int = 40):
+            Call<RemoteBookList>
 }

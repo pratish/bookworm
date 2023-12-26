@@ -15,6 +15,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.code.range.bookworm.data.network.GoogleBookApi
 import com.code.range.bookworm.data.network.dto.RemoteBook
 import com.code.range.bookworm.di.AppModuleImpl
+import com.code.range.bookworm.ui.screen.BookListScreen
 import com.code.range.bookworm.ui.theme.BookwormTheme
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -34,7 +35,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting("Android")
+                    BookListScreen()
                 }
             }
         }
