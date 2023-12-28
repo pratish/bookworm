@@ -12,14 +12,10 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.code.range.bookworm.data.network.GoogleBookApi
-import com.code.range.bookworm.data.network.dto.RemoteBook
+import androidx.navigation.compose.rememberNavController
 import com.code.range.bookworm.di.AppModuleImpl
-import com.code.range.bookworm.ui.screen.BookListScreen
+import com.code.range.bookworm.ui.navigation.AppNavigation
 import com.code.range.bookworm.ui.theme.BookwormTheme
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
 
 class MainActivity : ComponentActivity() {
 
@@ -35,7 +31,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    BookListScreen()
+                    AppNavigation(appModule = BookwormApp.appModule, navController = rememberNavController())
                 }
             }
         }

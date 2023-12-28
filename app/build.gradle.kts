@@ -62,6 +62,8 @@ dependencies {
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.material3:material3")
     implementation("com.google.android.libraries.identity.googleid:googleid:1.0.1")
+    implementation("androidx.navigation:navigation-compose:2.7.6")
+    implementation("androidx.room:room-ktx:2.6.1")
     testImplementation("junit:junit:4.13.2")
     val coroutines_version = "1.7.3"
     testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutines_version")

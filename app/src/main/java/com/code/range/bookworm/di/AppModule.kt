@@ -1,7 +1,8 @@
 package com.code.range.bookworm.di
 
-import android.app.Application
 import android.content.Context
+import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.mutableStateOf
 import com.code.range.bookworm.data.network.ApiClientFactory
 import com.code.range.bookworm.data.service.AuthRepository
 import com.code.range.bookworm.data.service.AuthRepositoryImpl
@@ -14,12 +15,13 @@ interface AppModule {
     val authRepo: AuthRepository
     val authApi: AuthApi
     val googleBookApi: GoogleBookApi
+    var isUserLoggedIn: MutableState<Boolean>
 }
 
 typealias ApiClient = Retrofit
 
 class AppModuleImpl(private val context: Context) : AppModule {
-
+    override var isUserLoggedIn: MutableState<Boolean> = mutableStateOf(false)
 
     private val apiClient = ApiClientFactory.instance
 

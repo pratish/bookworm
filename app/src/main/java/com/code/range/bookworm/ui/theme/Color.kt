@@ -2,10 +2,13 @@ package com.code.range.bookworm.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-val Purple80 = Color(0xFFD0BCFF)
-val PurpleGrey80 = Color(0xFFCCC2DC)
-val Pink80 = Color(0xFFEFB8C8)
-
-val Purple40 = Color(0xFF6650a4)
-val PurpleGrey40 = Color(0xFF625b71)
-val Pink40 = Color(0xFF7D5260)
+val LightBlue = Color(0xFF3AFFFF)
+val DarkBlue = Color(0xFF0288D1)
+val Pink = Color(0xFFE91E63)
+val DarkPink = Color(0xFFC2185B)
+val Lime = Color(0xFFCDDC39)
+val DarkLime = Color(0xFFAFB42B)
+val Orange = Color(0xFFFF9800)
+val DarkOrange = Color(0xFFE64A19)
+val Grey = Color(0xFF9E9E9E)
+val DarkGrey = Color(0xFF616161)

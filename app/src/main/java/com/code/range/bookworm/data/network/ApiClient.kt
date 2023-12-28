@@ -12,7 +12,6 @@ object ApiClientFactory {
         produce()
     }
     private fun produce() : Retrofit{
-        println("1234 - Producing new instance")
         val interceptor = HttpLoggingInterceptor()
         interceptor.setLevel(HttpLoggingInterceptor.Level.BASIC)
         val client = OkHttpClient.Builder().addInterceptor(interceptor = interceptor).build()
